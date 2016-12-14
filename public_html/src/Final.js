@@ -7,12 +7,24 @@
  * @return {Number} largest
  */
 function largestNumberOfFourArrays(arr) {
-    console.log(Math.max.apply(arr[0]));
-    console.log(Math.max.apply(arr[1]));
-    console.log(Math.max.apply(arr[2]));
-    console.log(Math.max.apply(arr[3]));
-    
-
+    //declare initial number to compare
+    var largest = 0;
+    var largestOrigin = [];
+    //nested for loops to get numbers from 2d array
+    for (var i = 0; i < arr.length; i++) {
+        
+        for (var j = 0; j < arr[i].length; j++) {
+            
+            if (arr[i][j] > largest) {
+                largest = arr[i][j];
+                largestOrigin = arr[i];
+            }
+            
+        }
+        
+    }
+    console.log(largestOrigin[0]);
+    return largestOrigin[0];
 }
 
 
@@ -24,9 +36,10 @@ function largestNumberOfFourArrays(arr) {
  * @return {String} strRepeated
  */
 function stringRepeat(str, times) {
-
+    //declare string to form repetitive string
     var string = "";
-
+    
+    //basic for loop to form a long string
     for (var i = 0; i < times; i++) {
         string += str;
     }
@@ -44,10 +57,10 @@ function stringRepeat(str, times) {
  * @return {VOID}
  */
 function inputValueToNewDiv(inputSelector, divID) {
-
+    //declare selected input field
     var input = document.querySelector(inputSelector);
     input.id = divID;
-
+    
     input.innerHTML = 'testing';
 
 
@@ -63,6 +76,7 @@ function inputValueToNewDiv(inputSelector, divID) {
  * @return {VOID}
  */
 function validateInputField(inputSelector) {
+    //declare div to add/remove class to
     var input = document.querySelector(inputSelector);
 
     if (input.value.length === 0) {
