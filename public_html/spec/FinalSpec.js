@@ -35,7 +35,7 @@ function sandboxElement(tag) {
 
 }
 
-
+//all set ------------------------------------
 describe("Function largestNumberOfFourArrays", function () {
 
     it('should find the number 10', function () {
@@ -52,6 +52,7 @@ describe("Function largestNumberOfFourArrays", function () {
 
 
 });
+//all set ------------------------------------
 
 //all set ------------------------------------
 describe("Function stringRepeat", function () {
@@ -71,7 +72,7 @@ describe("Function stringRepeat", function () {
 //all set ------------------------------------
 
 
-
+//all set ------------------------------------
 describe("Function inputValueToNewDiv", function () {
 
     inputSandbox('newDiv', 'testing');
@@ -84,6 +85,7 @@ describe("Function inputValueToNewDiv", function () {
     });
 
 });
+//all set ------------------------------------
 
 //all set ------------------------------------
 describe("Function validateInputField Valid", function () {

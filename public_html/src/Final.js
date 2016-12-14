@@ -12,18 +12,17 @@ function largestNumberOfFourArrays(arr) {
     var largestOrigin = [];
     //nested for loops to get numbers from 2d array
     for (var i = 0; i < arr.length; i++) {
-        
+
         for (var j = 0; j < arr[i].length; j++) {
-            
+
             if (arr[i][j] > largest) {
                 largest = arr[i][j];
                 largestOrigin = arr[i];
             }
-            
+
         }
-        
+
     }
-    console.log(largestOrigin[0]);
     return largestOrigin[0];
 }
 
@@ -38,7 +37,7 @@ function largestNumberOfFourArrays(arr) {
 function stringRepeat(str, times) {
     //declare string to form repetitive string
     var string = "";
-    
+
     //basic for loop to form a long string
     for (var i = 0; i < times; i++) {
         string += str;
@@ -58,12 +57,14 @@ function stringRepeat(str, times) {
  */
 function inputValueToNewDiv(inputSelector, divID) {
     //declare selected input field
-    var input = document.querySelector(inputSelector);
-    input.id = divID;
-    
-    input.innerHTML = 'testing';
 
+    var inputValue = document.querySelector(inputSelector);
+    inputValue.innerHTML = 'testing';
 
+    var newDiv = document.createElement('div');
+    newDiv.id = divID;
+    newDiv.innerHTML = 'testing';
+    document.body.appendChild(newDiv);
 }
 
 
